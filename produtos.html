@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Produtos - Lua Culinária Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="FOTOS/fundo.jpg" type="image/jpeg">
+    <meta name="description" content="Lua Culinária Delivery: As melhores tortas, lasanhas e macarronadas caseiras entregues na sua casa. Peça já!">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="FOTOS/LOGO.png" alt="Lua Culinária Home">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="produtos.html" class="active">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h2>Nossas Delícias</h2>
+            
+            <div class="produtos-grid">
+
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <button class="btn-seta anterior" onclick="mudarFoto('torta', -1)">&#10094;</button>
+                        <img id="img-torta" src="FOTOS/torta1frango.png" alt="Torta" onclick="abrirDetalhes('torta')" style="cursor: pointer;">
+                        <button class="btn-seta proxima" onclick="mudarFoto('torta', 1)">&#10095;</button>
+                    </div>
+                    <div class="produto-info">
+                        <h3 id="titulo-torta">Torta de Frango Cremoso</h3>
+                        <p class="preco">A partir de R$ 25,00</p>
+                        <p class="descricao">Clique na foto para ver detalhes</p>
+                    </div>
+                </div>
+
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <button class="btn-seta anterior" onclick="mudarFoto('lasanha', -1)">&#10094;</button>
+                        <img id="img-lasanha" src="FOTOS/lasanha1frango.png" alt="Lasanha" onclick="abrirDetalhes('lasanha')" style="cursor: pointer;">
+                        <button class="btn-seta proxima" onclick="mudarFoto('lasanha', 1)">&#10095;</button>
+                    </div>
+                    <div class="produto-info">
+                        <h3 id="titulo-lasanha">Lasanha de Frango</h3>
+                        <p class="preco">A partir de R$ 35,00</p>
+                        <p class="descricao">Clique na foto para ver detalhes</p>
+                    </div>
+                </div>
+
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <button class="btn-seta anterior" onclick="mudarFoto('macarronada', -1)">&#10094;</button>
+                        <img id="img-macarronada" src="FOTOS/macarronada1frango.png" alt="Macarronada" onclick="abrirDetalhes('macarronada')" style="cursor: pointer;">
+                        <button class="btn-seta proxima" onclick="mudarFoto('macarronada', 1)">&#10095;</button>
+                    </div>
+                    <div class="produto-info">
+                        <h3 id="titulo-macarronada">Macarronada de Frango</h3>
+                        <p class="preco">A partir de R$ 30,00</p>
+                        <p class="descricao">Clique na foto para ver detalhes</p>
+                    </div>
+                </div>
+
+            </div> </div> </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lua Culinária Delivery. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal-fundo" class="modal-fundo" onclick="fecharModal(event)">
+        <div class="modal-caixa">
+            <span class="btn-fechar" onclick="fecharModal(event)">&times;</span>
+
+            <div class="modal-imagem-wrapper">
+                <button class="seta-modal anterior-modal" onclick="mudarFotoModal(-1)">&#10094;</button>
+                
+                <img id="modal-img" src="" alt="Foto do Produto">
+                
+                <button class="seta-modal proxima-modal" onclick="mudarFotoModal(1)">&#10095;</button>
+            </div>
+            
+            <div class="modal-info">
+                <h2 id="modal-titulo">Nome do Prato</h2>
+                <p id="modal-desc">Descrição...</p>
+                <p id="modal-preco">R$ 00,00</p>
+                <a id="modal-botao" href="#" target="_blank" class="btn-modal-pedir">Pedir no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
